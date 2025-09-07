@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaurya's Blog</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* Simple Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffd5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    /* Hover Animation for Nav Links */
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav a:hover {
+      background: #00ffd5;
+      color: #111;
+      transform: translateY(-2px);
+    }
+
+    /* Simple Sections */
+    section {
+      padding: 6rem 2rem 4rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #00ffd5;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Section Colors */
+    #home { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    #about { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    #skills { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+    #contact { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-item {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    /* Contact Items */
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      
+      nav ul {
+        gap: 1rem;
+      }
+      
+      h1 { font-size: 2rem; }
+      h2 { font-size: 2rem; }
+      
+      section {
+        padding: 4rem 1rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Simple Navbar -->
+  <nav>
+    <div class="logo">Shaurya</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Shaurya Priyam</h1>
+    <p>Full-Stack Developer & Chemical Engineering Student at IIT Ropar</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm a passionate full-stack developer and first-year Chemical Engineering student at IIT Ropar. I love building modern web applications with interactive UI/UX, combining creativity and technology.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, React, Tailwind</p>
+      </div>
+      <div class="skill-item">
+        <h3>Backend</h3>
+        <p>Node.js, Express.js, MongoDB</p>
+      </div>
+      <div class="skill-item">
+        <h3>Tools</h3>
+        <p>Git, Firebase, GSAP</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <strong>Email:</strong> shaurya@example.com
+      </div>
+      <div class="contact-item">
+        <strong>GitHub:</strong> github.com/shaurya
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Register GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate sections on scroll
+    gsap.utils.toArray("section").forEach((section, i) => {
+      gsap.fromTo(section, 
+        {
+          opacity: 0,
+          y: 100
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+
+    // Animate skill items
+    gsap.utils.toArray(".skill-item").forEach((item, i) => {
+      gsap.fromTo(item,
+        {
+          opacity: 0,
+          scale: 0.8,
+          y: 50
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.6,
+          delay: i * 0.2,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
