@@ -1,0 +1,86 @@
+body {
+      font-family: Arial, sans-serif; /* font-family */
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5; /* background color */
+    }
+
+    /* Header */
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px; /* padding */
+      text-align: center; /* text-align */
+      position: relative;
+    }
+
+    /* Nav list */
+    nav ul {
+      display: flex; /* flex */
+      justify-content: center;
+      gap: 20px;
+      list-style-type: none;
+      margin: 10px 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline; /* hover effect */
+    }
+
+    /* Container for intro */
+    .intro-section {
+      display: flex; /* flex container */
+      padding: 30px;
+      gap: 30px;
+      background-color: white;
+      margin: 30px;
+      border: 1px solid #ddd; /* border */
+      border-radius: 8px;
+    }
+
+    .intro-section img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .blog-box {
+      background-color: #eef7ff;
+      padding: 20px;
+      margin: 30px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    /* Position absolute example */
+    .absolute-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: ;
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    details {
+      margin: 20px 30px;
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto 30px;
+    }

@@ -1,0 +1,135 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Flex + Box Sizing</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: #f1f5f9;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .box {
+        width: 250px;
+        height: 150px;
+        color: white;
+        border-radius: 12px;
+        padding: 0px;
+        border: 5px solid white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .content-box {
+        background: #2563eb;
+        box-sizing: content-box; /* default */
+      }
+
+      .border-box {
+        background: #16a34a;
+        box-sizing: border-box;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box content-box">
+        <p>content-box 📦<br>(box grows bigger)</p>
+      </div>
+      <div class="box border-box">
+        <p>border-box 🪟<br>(fits exact size)</p>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <title>Flex + Box Sizing</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: #f1f5f9;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .box {
+        width: 250px;
+        height: 150px;
+        color: white;
+        border-radius: 12px;
+        padding: 0px;
+        border: 5px solid white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .content-box {
+        background: #2563eb;
+        box-sizing: content-box; /* default */
+      }
+
+      .border-box {
+        background: #16a34a;
+        box-sizing: border-box;
+        padding: 0;
+      }
+    </style>
+</head>
+<body>
+     <div class="container">
+      <div class="box content-box">
+        <p>content-box 📦<br>(box grows bigger)</p>
+      </div>
+      <div class="box border-box">
+        <p>border-box 🪟<br>(fits exact size)</p>
+      </div>
+    </div>
+</body>
+</html>

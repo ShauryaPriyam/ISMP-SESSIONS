@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaurya Priyam - Self Introduction</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS -->
+  <style>
+    /* General body styling */
+    body {
+      font-family: Arial, sans-serif; /* font-family */
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5; /* background color */
+    }
+
+    /* Header */
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px; /* padding */
+      text-align: center; /* text-align */
+      position: relative;
+    }
+
+    /* Nav list */
+    nav ul {
+      display: flex; /* flex */
+      justify-content: center;
+      gap: 20px;
+      list-style-type: none;
+      margin: 10px 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline; /* hover effect */
+    }
+
+    /* Container for intro */
+    .intro-section {
+      display: flex; /* flex container */
+      padding: 30px;
+      gap: 30px;
+      background-color: white;
+      margin: 30px;
+      border: 1px solid #ddd; /* border */
+      border-radius: 8px;
+    }
+
+    .intro-section img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .blog-box {
+      background-color: #eef7ff;
+      padding: 20px;
+      margin: 30px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    /* Position absolute example */
+    .absolute-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: ;
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    details {
+      margin: 20px 30px;
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Shaurya Priyam</h1>
+    <span class="absolute-tag">IIT Ropar</span> <!-- position absolute -->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- INTRO SECTION WITH FLEX -->
+  <div class="intro-section">
+    <img src="https://avatars.githubusercontent.com/u/100000009?v=4" alt="Profile Photo" />
+
+    <div>
+      <h2 id="about">About Me</h2>
+      <p style="font-style: italic;"> <!-- Inline CSS -->
+        I am a full-stack MERN developer and a first-year student at IIT Ropar in Chemical Engineering. I enjoy solving real-world problems using code and building cool UIs.
+      </p>
+    </div>
+  </div>
+
+  <!-- EDUCATION SECTION -->
+  <div class="blog-box">
+    <h2 id="education">Education</h2>
+    <ul>
+      <li>B.Tech in Chemical Engineering, IIT Ropar (2024–2028)</li>
+    </ul>
+  </div>
+
+  <!-- SKILLS SECTION -->
+  <div class="blog-box">
+    <h2 id="skills">Skills</h2>
+    <ul>
+      <li>Frontend: HTML, CSS, JavaScript, React, Tailwind</li>
+      <li>Backend: Node.js, Express.js</li>
+      <li>Database: MongoDB</li>
+      <li>Tools: Git, GitHub, Firebase</li>
+      <li>Other: Problem Solving, Team Collaboration</li>
+    </ul>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="blog-box" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:promispriyam04@gmail.com">promispriyam04@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/promispriyam04" target="_blank">github.com/promispriyam04</a></p>
+    <p>Facebook: <a href="https://facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></p>
+  </div>
+
+  <!-- DETAILS AND IFRAME -->
+  <details>
+    <summary>Why I love development?</summary>
+    Building something meaningful from scratch and seeing users interact with it brings me joy.
+  </details>
+
+  <!-- YouTube Iframe -->
+  <iframe width="400" height="250" src="https://www.youtube.com/embed/V0VJ0CXB31U" title="Intro Video"></iframe>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Shaurya Priyam. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
