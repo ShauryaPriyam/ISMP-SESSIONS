@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Features Playground</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #000;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #0ff;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      color: #0ff;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ff;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 50px 20px;
+      border-bottom: 1px solid #333;
+    }
+
+    h2 {
+      color: #0ff;
+      margin-bottom: 15px;
+    }
+
+    .box {
+      background: #222;
+      padding: 20px;
+      margin: 20px 0;
+      display: inline-block;
+      border-radius: 8px;
+    }
+
+    /* 1. Colors & Backgrounds */
+    .gradient-box {
+      background: red;
+      color: #111;
+    }
+    
+    /* 2. Borders */
+    .border-box {
+      border: 4px solid #0ff;
+      border-radius: 10px;
+    }
+    /* 3. Inline vs Block */
+    .inline-example span {
+      background: #0ff;
+      color: #111;
+      padding: 5px;
+    }
+    .block-example div {
+      background: #0ff;
+      color: #111;
+      margin: 5px 0;
+      padding: 5px;
+    }
+
+    /* 4. Box-shadow */
+    .shadow-box {
+      box-shadow: 10px 10px 10px #0ff, 0 0 40px rgba(0, 255, 255, 0.4);
+    }
+
+    /* 5. Transitions */
+    .transition-box {
+      transition: transform 0.3s, background 0.3s;
+    }
+    .transition-box:hover {
+      background: #0ff;
+      color: #111;
+      transform: scale(1.1);
+    }
+
+    /* 6. Animations */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(20px); }
+    }
+    .animate-box {
+      animation: bounce 2s infinite;
+      background: #0ff;
+      color: #111;
+    }
+
+    /* 7. Transforms */
+    .transform-box:hover {
+      transform: rotate(10deg) scale(1.2);
+      background: #f0f;
+      transition: transform 0.4s;
+    }
+
+    /* 8. Flexbox */
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flex-container .item {
+      background: #0ff;
+      color: #111;
+      width: 200px;
+      text-align: center;
+      height: 200px;
+    }
+
+    /* 9. Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-container .item {
+      background: #f0f;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 10. Hover Effects */
+    .hover-box {
+      transition: all 0.3s ease;
+    }
+    .hover-box:hover {
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+      transform: translateY(-5px);
+    }
+
+    /* 11. Positioning */
+    .relative-box {
+      position: relative;
+      background: #222;
+      padding: 20px;
+    }
+    .absolute-child {
+      position: absolute;
+      top: 10px;
+      right: 100px;
+      background: #0ff;
+      color: #111;
+      padding: 5px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CSS Playground</h1>
+    <nav>
+      <a href="#colors">Colors</a>
+      <a href="#border">Borders</a>
+      <a href="#inline-block">Inline/Block</a>
+      <a href="#shadow">Shadow</a>
+      <a href="#transition">Transitions</a>
+      <a href="#animation">Animations</a>
+      <a href="#transform">Transforms</a>
+      <a href="#flex">Flexbox</a>
+      <a href="#grid">Grid</a>
+      <a href="#hover">Hover</a>
+      <a href="#position">Position</a>
+    </nav>
+  </header>
+
+  <section id="colors">
+    <h2>1. Colors & Backgrounds</h2>
+    <div class="box gradient-box">Gradient Background</div>
+  </section>
+  
+  <section id="border">
+    <h2>2. Borders</h2>
+    <div class="box border-box">Dashed Border</div>
+  </section>
+
+  <section id="inline-block">
+    <h2>3. Inline vs Block</h2>
+    <p><strong>Inline Example:</strong></p>
+    <div class="inline-example">
+      <span>One</span>
+      <span>Two</span>
+      <span>Three</span>
+    </div>
+    <p><strong>Block Example:</strong></p>
+    <div class="block-example">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </section>
+
+  <section id="shadow">
+    <h2>2. Box Shadow</h2>
+    <div class="box shadow-box">Glowing Shadow</div>
+  </section>
+  
+
+  <section id="transition">
+    <h2>4. Transitions</h2>
+    <div class="box transition-box">Hover Me</div>
+  </section>
+
+  <section id="animation">
+    <h2>5. Animations</h2>
+    <div class="box animate-box">I bounce!</div>
+  </section>
+
+  <section id="transform">
+    <h2>6. Transforms</h2>
+    <div class="box transform-box">Rotate + Scale on Hover</div>
+  </section>
+
+  <section id="flex">
+    <h2>7. Flexbox</h2>
+    <div class="flex-container">
+      <div class="item">1</div>
+    </div>
+  </section>
+
+  <section id="grid">
+    <h2>8. Grid</h2>
+    <div class="grid-container">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+  </section>
+
+  <section id="hover">
+    <h2>9. Hover Effects</h2>
+    <div class="box hover-box">Hover to Glow</div>
+  </section>
+
+  <section id="position">
+    <h2>10. Positioning</h2>
+    <div class="relative-box">
+      Relative Box
+      <div class="absolute-child">Absolute</div>
+    </div>
+  </section>
+
+
+</body>
+</html>
