@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Query & Manipulation Demo</title>
+  <style>
+    .highlight {
+      color: white;
+      background: green;
+      padding: 5px;
+    }
+    .big {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-heading">DOM Demo</h1>
+  <h2>SUB-HEADING </h2>
+  <p class="para">This is paragraph 1</p>
+  <p class="para">This is paragraph 2</p>
+  <p>This is paragraph 3 (no class)</p>
+
+  <ul>
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Banana</li>
+  </ul>
+
+  <!-- <script>
+    // ==== ID selector ====
+    const heading = document.getElementById("main-heading");
+    heading.textContent = "Changed using getElementById!";
+    heading.style.color = "blue";
+
+    // ==== Class selector ====
+    const paras = document.getElementsByClassName("para");
+    paras[0].classList.add("highlight");   // add CSS class
+    paras[1].classList.add("big");
+
+    // ==== Tag selector ====
+    const allLi = document.getElementsByTagName("li");
+    allLi[0].style.color = "red";     // Apple
+    allLi[2].style.fontStyle = "italic";  // Banana
+
+    // ==== querySelector / querySelectorAll ====
+    const firstPara = document.querySelector(".para"); // first matching
+    firstPara.textContent = "Updated with querySelector";
+
+    const allParas = document.querySelectorAll("p"); // all <p>
+    allParas[2].style.background = "yellow";
+
+    // ==== Document first & last element ====
+    console.log("First Element Child:", document.firstElementChild); // <html>
+    console.log("Last Element Child:", document.lastElementChild);   // <body>
+
+    // also highlight first/last child inside body
+    document.body.firstElementChild.style.border = "2px solid black"; // <h1>
+    document.body.lastElementChild.style.border = "2px dashed red";   // 
+  </script> -->
+  <script src="script.js"></script>
+</body>
+</html>

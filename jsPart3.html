@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS If-Else, Functions & Arrays Demo</title>
+</head>
+<body>
+  <h1>JavaScript Basics</h1>
+  <p>Open the console to see results!</p>
+
+  <script>
+    // ===== IF / ELSE =====
+    let num = 15;
+    if (num > 10) {
+      console.log(num, "is greater than 10");
+    } else {
+      console.log(num, "is not greater than 10");
+    }
+
+    // // Boolean example
+    // let isLoggedIn = true;
+    // if (isLoggedIn) {
+    //   console.log("User is logged in ✅");
+    // } else {
+    //   console.log("User is not logged in ❌");
+    // }
+
+    // // ===== FUNCTIONS =====
+
+    // // 1. Normal function
+    // function greet(name) {
+    //   return "Hello " + name;
+    // }
+    // console.log(greet("Shaurya"));
+
+    // // 2. Function expression
+    // const square = function(x) {
+    //   return x * x;
+    // };
+    // console.log("Square of 5:", square(5));
+
+    // // 3. Arrow function
+    // const add = (a, b) => a + b;
+    // console.log("5 + 3 =", add(5, 3));
+
+    // // 4. Arrow function with multiple lines
+    // const checkEven = (n) => {
+    //   if (n % 2 === 0) {
+    //     return n + " is Even";
+    //   } else {
+    //     return n + " is Odd";
+    //   }
+    // };
+    // console.log(checkEven(10));
+    // console.log(checkEven(7));
+
+    // // ===== ARRAYS =====
+    // let fruits = ["Apple", "Mango", "Banana"];
+
+    // console.log("Original Array:", fruits);
+
+    // // Common array methods
+    // fruits.push("Orange");  // add at end
+    // console.log("After push:", fruits);
+
+    // fruits.pop();           // remove last
+    // console.log("After pop:", fruits);
+
+    // fruits.unshift("Grapes"); // add at start
+    // console.log("After unshift:", fruits);
+
+    // fruits.shift();         // remove first
+    // console.log("After shift:", fruits);
+
+    // console.log("Includes Mango?", fruits.includes("Mango"));
+
+    // console.log("Index of Banana:", fruits.indexOf("Banana"));
+
+    // let sliced = fruits.slice(0, 2); // copy part
+    // console.log("Sliced array:", sliced);
+
+    // fruits.splice(1, 1, "Peach"); // remove & add
+    // console.log("After splice:", fruits);
+
+    // let joined = fruits.join(" - "); // join as string
+    // console.log("Joined string:", joined);
+
+    // // Map example
+    // let numbers = [1, 2, 3, 4];
+    // let squared = numbers.map(n => n * n);
+    // console.log("Squared numbers:", squared);
+
+    // // Filter example
+    // let even = numbers.filter(n => n % 2 === 0);
+    // console.log("Even numbers:", even);
+
+    // // Reduce example
+    // let sum = numbers.reduce((acc, n) => acc + n, 0);
+    // console.log("Sum of numbers:", sum);
+  </script>
+</body>
+</html>
